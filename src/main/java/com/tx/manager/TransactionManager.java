@@ -4,9 +4,9 @@ import com.tx.model.Transaction;
 import com.tx.model.TransactionStatistics;
 
 import java.util.List;
+import java.util.Map;
 
 /**
- * Service abstraction for possible Vessel operations.
  * @author VipinK
  */
 public interface TransactionManager {
