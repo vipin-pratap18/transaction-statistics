@@ -34,6 +34,7 @@ public class TransactionServiceController {
 	public void saveTransaction(@RequestBody Transaction transaction, HttpServletResponse response){
 		String validationResponse = requestValidator.validateTransaction(transaction);
 		if(validationResponse != null){
+			txManager.saveTransaction(transaction);
 			response.setStatus(HttpServletResponse.SC_NO_CONTENT);
 			return;
 		}
