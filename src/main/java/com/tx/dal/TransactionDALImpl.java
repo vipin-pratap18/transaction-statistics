@@ -40,7 +40,7 @@ public class TransactionDALImpl implements TransactionDAL {
     public Transaction getTransaction(Transaction transaction) {
         long timestamp = transaction.getTimestamp();
         Transaction existingTxn = timestampToTransactionMap.get(timestamp);
-        if(existingTxn.equals(transaction)){
+        if(existingTxn != null && existingTxn.equals(transaction)){
             return existingTxn;
         }
         return null;
